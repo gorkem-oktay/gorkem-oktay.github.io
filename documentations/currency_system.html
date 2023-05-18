@@ -94,27 +94,27 @@
         <div class="row">
           <div class="col-md-12">
             <h2 class="doc-header">Settings</h2>
-            <p>System will automatically generate `CurrencySettings` scriptable object under `Assets/Resources`. Do not
+            <p>System will automatically generate <span class="text-warning">CurrencySettings</span> scriptable object under <span class="text-warning">Assets/Resources</span>. Do not
               move it. Even if it is moved, system will generate a new one there and use it.</p>
             <img src="../assets/img/store/currency_system/img_settings.png" alt="">
             <h4>1. Currencies</h4>
             <p>
               Here you need to define your currencies.
             <ul>
-              <li>`Type` -> Defines the type of currency.</li>
-              <li>`Initial Amount` -> With how much currency user will have at start.</li>
-              <li>`Has Capacity` -> Capacity option for currencies like key or energy.</li>
-              <li>`Initial Capacity` -> Initial capacity of currency.</li>
+              <li><span class="badge text-bg-primary">Type</span> -> Defines the type of currency.</li>
+              <li><span class="badge text-bg-primary">Initial Amount</span> -> With how much currency user will have at start.</li>
+              <li><span class="badge text-bg-primary">Has Capacity</span> -> Capacity option for currencies like key or energy.</li>
+              <li><span class="badge text-bg-primary">Initial Capacity</span> -> Initial capacity of currency.</li>
             </ul>
             </p>
             <h4>2. Keys</h4>
             <p>These keys are used to store currencies' data. By default, it doesn't need a configuration and data is
-              stored at `PlayerPrefs`. If any other method is needed, you need to [implement an
-              IRepository](#implementing-custom-repository) that suits your needs. Only then you may need to change
+              stored at <span class="text-warning">PlayerPrefs</span>. If any other method is needed, you need to implement an
+              <span class="text-warning">IRepository</span> that suits your needs. Only then you may need to change
               these keys to match your services' ids or keys.</p>
             <h4>3. Custom</h4>
             <ul>
-              <li>`Repository Class` -> Type of repository to use.</li>
+              <li><span class="badge text-bg-primary">Repository Class</span> -> Type of repository to use.</li>
             </ul>
           </div>
           <div class="col-md-12">
@@ -169,51 +169,51 @@
             <p>Its state is changed automatically on currency amounts change.</p>
             <p>Settings:</p>
             <ul>
-              <li>`Type` -> type of currency</li>
-              <li>`Cost` -> cost of transaction</li>
+              <li><span class="badge text-bg-primary">Type</span> -> type of currency</li>
+              <li><span class="badge text-bg-primary">Cost</span> -> cost of transaction</li>
             </ul>
             <p>Resources:</p>
             <ul>
-              <li>`Background` -> the reference of background of the button</li>
-              <li>`Background Active` -> sprite to set on active state</li>
-              <li>`Background Disabled` -> sprite to set on disabled state</li>
+              <li><span class="badge text-bg-primary">Background</span> -> the reference of background of the button</li>
+              <li><span class="badge text-bg-primary">Background Active</span> -> sprite to set on active state</li>
+              <li><span class="badge text-bg-primary">Background Disabled</span> -> sprite to set on disabled state</li>
             </ul>
             <p>Events:</p>
             <ul>
-              <li>`OnSuccess` -> Triggered on transaction succeeded</li>
-              <li>`OnFail` -> Triggered on transaction failed</li>
+              <li><span class="badge text-bg-primary">OnSuccess</span> -> Triggered on transaction succeeded</li>
+              <li><span class="badge text-bg-primary">OnFail</span> -> Triggered on transaction failed</li>
             </ul>
             <h4>2. Currency Collectable</h4>
             <img src="../assets/img/store/currency_system/img_currency_collectable.png" alt="">
             <p>3D version is identical to 2D. The only difference is the collider type it needs.</p>
             <p>Settings:</p>
             <ul>
-              <li>`Type` -> type of currency</li>
-              <li>`Amount` -> amount to add on collected</li>
-              <li>`Collector Tags` -> allowed tags to collect</li>
-              <li>`Disappear On Collect` -> disables game object on collect</li>
+              <li><span class="badge text-bg-primary">Type</span> -> type of currency</li>
+              <li><span class="badge text-bg-primary">Amount</span> -> amount to add on collected</li>
+              <li><span class="badge text-bg-primary">Collector Tags</span> -> allowed tags to collect</li>
+              <li><span class="badge text-bg-primary">Disappear On Collect</span> -> disables game object on collect</li>
             </ul>
             <p>Events:</p>
             <ul>
-              <li>`On Collected` -> Triggered on collected</li>
+              <li><span class="badge text-bg-primary">On Collected</span> -> Triggered on collected</li>
             </ul>
             <h4>3. Currency Label</h4>
             <img src="../assets/img/store/currency_system/img_currency_label.png" alt="">
             <p>There are two ready implementation for;</p>
             <ul>
-              <li>Unity Text -> `CurrencyLabelText`</li>
-              <li>TextMeshPro -> `CurrencyLabelTMP`</li>
+              <li>Unity Text -> <span class="text-warning">CurrencyLabelText</span></li>
+              <li>TextMeshPro -> <span class="text-warning">CurrencyLabelTMP</span></li>
             </ul>
-            <p>New ones can be implemented via `ICurrencyLabel`.</p>
+            <p>New ones can be implemented via <span class="text-warning">ICurrencyLabel</span>.</p>
             <p>Settings:</p>
             <ul>
-              <li>`Type` -> type of currency</li>
-              <li>`Label` -> label to show amount</li>
+              <li><span class="badge text-bg-primary">Type</span> -> type of currency</li>
+              <li><span class="badge text-bg-primary">Label</span> -> label to show amount</li>
             </ul>
           </div>
           <div class="col-md-12">
             <h2 class="doc-header">Implementing Custom Repository</h2>
-            <p>You just need to implement this simple interface and change [Repository Class](#3-custom) to it at the
+            <p>You just need to implement this simple interface and change <span class="text-warning">Repository Class</span> to it at the
               settings.</p>
             <pre>
               namespace GO
