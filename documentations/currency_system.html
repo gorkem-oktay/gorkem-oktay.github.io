@@ -134,6 +134,9 @@
               
               // To check if has enough
               bool hasEnough = CurrencyManager.Has("Gold", 100);
+
+              // To delete key data
+              CurrencyManager.Clear("Gold");
               
               // To get capacity
               int keyCapacity = CurrencyManager.GetCapacity("Key");
@@ -219,6 +222,7 @@
                   {
                       void Set(string type, int value);
                       int Get(string type, int defaultValue);
+                      void Clear(string type);
                   }
               }
             </pre>
