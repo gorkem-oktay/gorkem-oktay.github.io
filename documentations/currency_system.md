@@ -4,7 +4,7 @@
 
 System will automatically generate `CurrencySettings` scriptable object under `Assets/Resources`. Do not move it. Even if it is moved, system will generate a new one there and use it.
 
-![Settings](assets/img/store/currency_system/img_settings.png)
+![Settings](../assets/img/store/currency_system/img_settings.png)
 
 ### 1. Currencies
 Here you need to define your currencies.
@@ -40,6 +40,9 @@ int newTotalAfterRemoval = CurrencyManager.Remove("Gold", 100);
 // To check if has enough
 bool hasEnough = CurrencyManager.Has("Gold", 100);
 
+// To delete key data
+CurrencyManager.Clear("Gold");
+
 // To get capacity
 int keyCapacity = CurrencyManager.GetCapacity("Key");
 
@@ -70,7 +73,7 @@ CurrencyManager.OnCapacityChanged += (type, capacity) => {
 
 ### 1. Currency Button
 
-![CurrencyButton](assets/img/store/currency_system/img_currency_button.png)
+![CurrencyButton](../assets/img/store/currency_system/img_currency_button.png)
 
 Its state is changed automatically on currency amounts change. 
 
@@ -89,7 +92,7 @@ Events:
 
 ### 2. Currency Collectable
 
-![CurrencyCollectable](assets/img/store/currency_system/img_currency_collectable.png)
+![CurrencyCollectable](../assets/img/store/currency_system/img_currency_collectable.png)
 
 3D version is identical to 2D. The only difference is the collider type it needs.
 
@@ -104,7 +107,7 @@ Events:
 
 ### 3. Currency Label
 
-![CurrencyCollectable](assets/img/store/currency_system/img_currency_label.png)
+![CurrencyCollectable](../assets/img/store/currency_system/img_currency_label.png)
 
 There are two ready implementation for;
 - Unity Text -> `CurrencyLabelText`
@@ -129,6 +132,7 @@ namespace GO
     {
         void Set(string type, int value);
         int Get(string type, int defaultValue);
+        void Clear(string type);
     }
 }
 ```
